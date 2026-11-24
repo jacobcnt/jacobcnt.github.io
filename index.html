@@ -1,0 +1,1546 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>飞魔幻小说排行榜_官方视频门户|玄幻阅读品牌</title>
+<meta name="description" content="飞魔幻小说排行榜官方网站，深耕华语玄幻、仙侠与奇幻文学的视频内容品牌，聚合榜单解读、书评推荐、创作者访谈与高清内容，打造值得信赖的阅读内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e1b33'/%3E%3Cpath d='M14 44 L24 20 L32 36 L40 22 L50 44 Z' fill='%2340e0d0'/%3E%3Ccircle cx='32' cy='14' r='4' fill='%23ff7a59'/%3E%3C/svg%3E">
+<style>
+:root{
+  --fm-dark:#0b1426;
+  --fm-dark2:#101e38;
+  --fm-card:#14243f;
+  --fm-line:rgba(120,190,220,.18);
+  --fm-neon:#40e0d0;
+  --fm-neon2:#7cf7c4;
+  --fm-accent:#ff7a59;
+  --fm-text:#e8f1fb;
+  --fm-muted:#93a8c4;
+  --fm-dim:#6c84a3;
+  --fm-radius:16px;
+  --fm-maxw:1200px;
+  --fm-header-h:108px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  background:var(--fm-dark);
+  color:var(--fm-text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+.fm-wrap{max-width:var(--fm-maxw);margin:0 auto;padding:0 24px}
+.fm-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ============ 吸顶公告 + 页头 ============ */
+.fm-fixed-top{
+  position:sticky;top:0;z-index:80;
+  backdrop-filter:blur(14px);
+  background:rgba(9,18,34,.92);
+  border-bottom:1px solid var(--fm-line);
+}
+.fm-notice{
+  background:linear-gradient(90deg,#0f2d3a,#123b4a 45%,#1a2438);
+  border-bottom:1px solid var(--fm-line);
+  font-size:13px;
+  color:#b9f4ec;
+}
+.fm-notice .fm-wrap{
+  display:flex;align-items:center;gap:12px;
+  padding-top:8px;padding-bottom:8px;overflow:hidden;
+}
+.fm-notice-badge{
+  flex:0 0 auto;
+  background:var(--fm-accent);
+  color:#0b1426;
+  font-weight:700;
+  font-size:11px;
+  padding:2px 9px;
+  border-radius:999px;
+  letter-spacing:.08em;
+}
+.fm-notice-track{
+  display:flex;gap:34px;white-space:nowrap;
+  animation:fm-marquee 26s linear infinite;
+}
+.fm-notice-track span{color:#a9ded8}
+.fm-notice-track b{color:#fff;font-weight:600}
+@keyframes fm-marquee{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+.fm-header{position:relative}
+.fm-header-inner{
+  display:flex;align-items:center;gap:28px;
+  padding-top:14px;padding-bottom:14px;
+}
+.fm-brand{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+.fm-brand-mark{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(140deg,#0f3d52,#123a64);
+  display:grid;place-items:center;
+  border:1px solid rgba(64,224,208,.45);
+  box-shadow:0 0 18px rgba(64,224,208,.22);
+}
+.fm-brand-mark svg{width:24px;height:24px}
+.fm-brand-text strong{
+  display:block;font-size:17px;letter-spacing:.04em;
+}
+.fm-brand-text span{
+  display:block;font-size:11px;color:var(--fm-dim);letter-spacing:.22em;
+}
+.fm-nav{flex:1 1 auto;display:flex;gap:4px;justify-content:center;flex-wrap:wrap}
+.fm-nav a{
+  font-size:14px;color:var(--fm-muted);
+  padding:7px 13px;border-radius:9px;
+  transition:color .2s,background .2s;
+}
+.fm-nav a:hover,.fm-nav a:focus-visible{color:var(--fm-neon2);background:rgba(64,224,208,.08)}
+.fm-header-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.fm-search{
+  display:flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--fm-line);
+  border-radius:999px;
+  padding:7px 8px 7px 14px;
+  transition:border-color .2s;
+}
+.fm-search:focus-within{border-color:rgba(64,224,208,.6)}
+.fm-search input{
+  background:none;border:none;outline:none;color:var(--fm-text);
+  font-size:13px;width:132px;
+}
+.fm-search input::placeholder{color:var(--fm-dim)}
+.fm-search button{
+  background:var(--fm-neon);color:#08202a;font-weight:700;
+  font-size:12px;padding:5px 12px;border-radius:999px;
+  transition:opacity .2s;
+}
+.fm-search button:hover{opacity:.85}
+.fm-btn-ghost{
+  font-size:13px;padding:8px 16px;border-radius:999px;
+  border:1px solid rgba(64,224,208,.4);color:var(--fm-neon2);
+  transition:background .2s,transform .2s;
+}
+.fm-btn-ghost:hover{background:rgba(64,224,208,.1);transform:translateY(-1px)}
+.fm-burger{
+  display:none;width:42px;height:42px;border-radius:10px;
+  border:1px solid var(--fm-line);place-items:center;
+}
+.fm-burger span{display:block;width:18px;height:2px;background:var(--fm-text);margin:3px 0;transition:.25s}
+.fm-burger.is-open span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.fm-burger.is-open span:nth-child(2){opacity:0}
+.fm-burger.is-open span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+
+/* ============ 通用段落 ============ */
+.fm-section{padding:72px 0;scroll-margin-top:calc(var(--fm-header-h) + 16px)}
+.fm-section-alt{background:linear-gradient(180deg,#0b1426,#0d1a2f)}
+.fm-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.24em;color:var(--fm-neon);
+  text-transform:uppercase;margin-bottom:14px;
+}
+.fm-eyebrow::before{content:"";width:22px;height:1px;background:var(--fm-neon)}
+.fm-h2{
+  font-size:clamp(24px,3vw,34px);
+  line-height:1.3;font-weight:800;letter-spacing:.01em;
+}
+.fm-h2 em{font-style:normal;color:var(--fm-neon)}
+.fm-lead{color:var(--fm-muted);font-size:15px;max-width:760px;margin-top:12px}
+.fm-sec-head{margin-bottom:38px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.fm-h3{font-size:18px;font-weight:700;line-height:1.45}
+
+/* ============ 首屏 6:4 图文 ============ */
+.fm-hero{padding:56px 0 64px;position:relative;overflow:hidden}
+.fm-hero::before{
+  content:"";position:absolute;inset:-20% -10% auto;
+  height:620px;pointer-events:none;
+  background:radial-gradient(ellipse at 22% 8%,rgba(64,224,208,.16),transparent 62%),
+             radial-gradient(ellipse at 82% 0%,rgba(255,122,89,.12),transparent 58%);
+}
+.fm-hero-grid{
+  position:relative;display:grid;gap:44px;
+  grid-template-columns:minmax(0,6fr) minmax(0,4fr);
+  align-items:center;
+}
+.fm-hero-copy h1{
+  font-size:clamp(34px,5.2vw,62px);
+  line-height:1.08;font-weight:900;letter-spacing:-.01em;
+  margin:14px 0 0;
+}
+.fm-hero-copy h1 .fm-grad{
+  background:linear-gradient(100deg,#7cf7c4,#40e0d0 48%,#6aa9ff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.fm-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:.14em;color:var(--fm-neon2);
+  border:1px solid rgba(64,224,208,.35);
+  background:rgba(64,224,208,.07);
+  padding:5px 13px;border-radius:999px;
+}
+.fm-hero-badge i{width:6px;height:6px;border-radius:50%;background:var(--fm-neon);display:block}
+.fm-hero-desc{margin-top:22px;color:#b7c8dd;font-size:15.5px;max-width:560px}
+.fm-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.fm-btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(120deg,#40e0d0,#7cf7c4);
+  color:#07222b;font-weight:700;font-size:14px;
+  padding:12px 24px;border-radius:12px;
+  box-shadow:0 10px 26px -10px rgba(64,224,208,.6);
+  transition:transform .2s,box-shadow .2s;
+}
+.fm-btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(64,224,208,.75)}
+.fm-btn-line{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(150,190,225,.3);color:var(--fm-text);
+  font-size:14px;padding:11px 22px;border-radius:12px;
+  transition:border-color .2s,background .2s;
+}
+.fm-btn-line:hover{border-color:rgba(64,224,208,.6);background:rgba(64,224,208,.06)}
+.fm-hero-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;margin-top:38px;
+}
+.fm-stat{
+  border:1px solid var(--fm-line);border-radius:14px;
+  padding:15px 16px;background:rgba(255,255,255,.028);
+}
+.fm-stat strong{
+  display:block;font-size:23px;font-weight:800;color:var(--fm-neon2);
+  letter-spacing:-.01em;
+}
+.fm-stat span{font-size:12.5px;color:var(--fm-dim);letter-spacing:.05em}
+.fm-hero-visual{
+  position:relative;border-radius:22px;overflow:hidden;
+  border:1px solid rgba(120,190,220,.24);
+  box-shadow:0 40px 80px -46px rgba(0,0,0,.9);
+  aspect-ratio:4/4.6;
+}
+.fm-hero-visual img{width:100%;height:100%;object-fit:cover}
+.fm-hero-rank{
+  position:absolute;left:16px;right:16px;bottom:16px;
+  background:rgba(9,20,36,.82);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(120,190,220,.24);
+  border-radius:14px;padding:13px 15px;
+}
+.fm-hero-rank p{font-size:11.5px;letter-spacing:.16em;color:var(--fm-neon);margin-bottom:7px}
+.fm-hero-rank ol{display:grid;gap:5px;counter-reset:rk}
+.fm-hero-rank li{
+  display:flex;gap:9px;align-items:baseline;
+  font-size:12.5px;color:#cfe0f0;counter-increment:rk;
+}
+.fm-hero-rank li::before{
+  content:counter(rk);flex:0 0 16px;
+  color:var(--fm-neon2);font-weight:700;font-size:11px;
+}
+.fm-hero-rank li span{color:var(--fm-accent);font-size:11px;flex:0 0 auto}
+
+/* ============ 正文图文（深度解析） ============ */
+.fm-explain-grid{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,0.56fr);
+  gap:40px;align-items:start;
+}
+.fm-explain figure{
+  border-radius:var(--fm-radius);overflow:hidden;
+  border:1px solid var(--fm-line);
+  background:var(--fm-card);
+  position:sticky;top:calc(var(--fm-header-h) + 26px);
+}
+.fm-explain figure img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.fm-explain figcaption{
+  padding:12px 15px;font-size:12.5px;color:var(--fm-dim);
+  border-top:1px solid var(--fm-line);
+}
+.fm-prose p{color:#c3d3e4;font-size:15px;margin-bottom:16px}
+.fm-prose h3{margin:26px 0 10px;color:#fff}
+.fm-prose h3:first-child{margin-top:0}
+.fm-prose strong{color:var(--fm-neon2)}
+
+/* ============ 视频区：三列等高卡片 ============ */
+.fm-video-grid{
+  display:grid;gap:22px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.fm-video-card{
+  background:var(--fm-card);
+  border:1px solid var(--fm-line);
+  border-radius:var(--fm-radius);
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+.fm-video-card:hover{transform:translateY(-4px);border-color:rgba(64,224,208,.42);box-shadow:0 24px 46px -28px rgba(0,0,0,.9)}
+.fm-video-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0a1525}
+.fm-video-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.fm-video-card:hover .fm-video-thumb img{transform:scale(1.04)}
+.fm-video-play{
+  position:absolute;inset:0;display:grid;place-items:center;
+  background:linear-gradient(180deg,rgba(8,18,32,.05),rgba(8,18,32,.62));
+}
+.fm-video-play i{
+  width:46px;height:46px;border-radius:50%;
+  background:rgba(64,224,208,.92);color:#07222b;
+  display:grid;place-items:center;font-style:normal;font-size:15px;
+  box-shadow:0 8px 24px -8px rgba(64,224,208,.8);
+}
+.fm-video-tag{
+  position:absolute;top:11px;left:11px;
+  font-size:11px;padding:3px 9px;border-radius:6px;
+  background:rgba(9,20,36,.78);border:1px solid var(--fm-line);
+  color:var(--fm-neon2);letter-spacing:.05em;
+  backdrop-filter:blur(4px);
+}
+.fm-video-body{padding:16px 17px 17px;display:flex;flex-direction:column;gap:9px;flex:1 1 auto}
+.fm-video-body h3{font-size:16px;line-height:1.5}
+.fm-video-desc{font-size:13px;color:var(--fm-muted);flex:1 1 auto}
+.fm-video-meta{display:flex;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--fm-dim)}
+.fm-video-foot{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border-top:1px solid var(--fm-line);padding-top:11px;
+}
+.fm-author-chip{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#b9cbe0}
+.fm-avatar{
+  width:26px;height:26px;border-radius:50%;
+  display:grid;place-items:center;
+  font-size:11px;font-weight:700;color:#04222a;
+  background:linear-gradient(140deg,#7cf7c4,#40e0d0);
+  flex:0 0 auto;
+}
+.fm-avatar.v2{background:linear-gradient(140deg,#ffb27a,#ff7a59)}
+.fm-avatar.v3{background:linear-gradient(140deg,#9fb8ff,#6aa9ff)}
+.fm-avatar.v4{background:linear-gradient(140deg,#d7a6ff,#a06aff)}
+.fm-actions{display:flex;gap:6px}
+.fm-act{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:11.5px;color:var(--fm-muted);
+  padding:4px 8px;border-radius:8px;
+  border:1px solid transparent;
+  transition:.2s;
+}
+.fm-act:hover{background:rgba(64,224,208,.1);color:var(--fm-neon2);border-color:rgba(64,224,208,.28)}
+.fm-act.is-liked{color:var(--fm-accent)}
+.fm-act.is-saved{color:#ffd166}
+.fm-act svg{width:13px;height:13px;fill:currentColor}
+
+/* ============ 专题：4项 ============ */
+.fm-topic-grid{display:grid;gap:22px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.fm-topic{
+  border:1px solid var(--fm-line);border-radius:var(--fm-radius);
+  background:linear-gradient(160deg,rgba(20,36,63,.95),rgba(14,26,46,.95));
+  padding:22px;display:flex;flex-direction:column;gap:13px;
+}
+.fm-topic-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+.fm-topic-head h3{font-size:17px}
+.fm-status{
+  flex:0 0 auto;font-size:11px;padding:3px 9px;border-radius:999px;
+  border:1px solid rgba(124,247,196,.36);color:var(--fm-neon2);
+  background:rgba(124,247,196,.08);white-space:nowrap;
+}
+.fm-status.b{color:#ffc9a8;border-color:rgba(255,122,89,.36);background:rgba(255,122,89,.08)}
+.fm-topic-desc{font-size:13px;color:var(--fm-muted)}
+.fm-topic-list{display:grid;gap:8px;border-top:1px dashed rgba(120,190,220,.22);padding-top:13px}
+.fm-topic-list li{display:flex;gap:9px;font-size:13px;color:#bccfe2}
+.fm-topic-list li::before{content:"◆";color:var(--fm-neon);font-size:9px;line-height:1.9}
+.fm-topic figure{border-radius:12px;overflow:hidden;border:1px solid var(--fm-line)}
+.fm-topic figure img{width:100%;aspect-ratio:16/7;object-fit:cover}
+
+/* ============ 榜单 ============ */
+.fm-board-grid{display:grid;gap:22px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.fm-board{
+  border:1px solid var(--fm-line);border-radius:var(--fm-radius);
+  background:rgba(255,255,255,.025);padding:20px;
+}
+.fm-board h3{display:flex;align-items:center;gap:9px;font-size:15.5px;margin-bottom:14px}
+.fm-board h3 b{
+  font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;
+  background:rgba(64,224,208,.14);color:var(--fm-neon2);
+}
+.fm-board h3 b.b2{background:rgba(255,122,89,.14);color:#ffb393}
+.fm-board h3 b.b3{background:rgba(159,184,255,.14);color:#b9caff}
+.fm-board ol{display:grid;gap:9px;counter-reset:bd}
+.fm-board li{
+  display:grid;grid-template-columns:20px minmax(0,1fr) auto;
+  gap:9px;align-items:baseline;font-size:13px;
+  counter-increment:bd;color:#c6d6e6;
+  padding-bottom:8px;border-bottom:1px dashed rgba(120,190,220,.15);
+}
+.fm-board li:last-child{border-bottom:none;padding-bottom:0}
+.fm-board li::before{
+  content:counter(bd);font-weight:800;font-size:12px;color:var(--fm-dim);
+}
+.fm-board li:nth-child(1)::before,.fm-board li:nth-child(2)::before,.fm-board li:nth-child(3)::before{color:var(--fm-accent)}
+.fm-board li em{font-style:normal;color:var(--fm-neon2);font-size:11.5px;white-space:nowrap}
+.fm-board li span{color:var(--fm-dim);font-size:11px}
+
+/* ============ 作者：双列简介 ============ */
+.fm-author-grid{display:grid;gap:22px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.fm-author{
+  display:flex;gap:16px;
+  border:1px solid var(--fm-line);border-radius:var(--fm-radius);
+  background:rgba(20,36,63,.6);padding:20px;
+  transition:border-color .25s,transform .25s;
+}
+.fm-author:hover{border-color:rgba(64,224,208,.4);transform:translateY(-2px)}
+.fm-author-ava{
+  width:58px;height:58px;border-radius:16px;flex:0 0 auto;
+  display:grid;place-items:center;font-size:20px;font-weight:800;color:#04222a;
+  background:linear-gradient(150deg,#7cf7c4,#40e0d0);
+}
+.fm-author-ava.a2{background:linear-gradient(150deg,#ffb27a,#ff7a59)}
+.fm-author-ava.a3{background:linear-gradient(150deg,#9fb8ff,#6aa9ff)}
+.fm-author-ava.a4{background:linear-gradient(150deg,#d7a6ff,#a06aff)}
+.fm-author-ava.a5{background:linear-gradient(150deg,#ffe08a,#f7c948)}
+.fm-author-info{min-width:0}
+.fm-author-info h3{font-size:16px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.fm-author-info h3 small{
+  font-size:10.5px;font-weight:500;color:var(--fm-neon2);
+  border:1px solid rgba(64,224,208,.3);border-radius:5px;padding:1px 6px;
+}
+.fm-author-meta{display:flex;gap:13px;flex-wrap:wrap;font-size:12px;color:var(--fm-dim);margin:6px 0 8px}
+.fm-author-bio{font-size:13px;color:var(--fm-muted)}
+.fm-author-more{
+  margin-top:10px;font-size:12.5px;color:var(--fm-neon2);
+  display:inline-flex;align-items:center;gap:5px;
+}
+.fm-author-more:hover{text-decoration:underline}
+
+/* ============ 评论：双列短评 ============ */
+.fm-comment-grid{display:grid;gap:18px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.fm-comment{
+  border:1px solid var(--fm-line);border-radius:14px;
+  background:rgba(255,255,255,.024);padding:17px 18px;
+}
+.fm-comment-top{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.fm-comment-top strong{font-size:13.5px}
+.fm-comment-top time{margin-left:auto;font-size:11.5px;color:var(--fm-dim)}
+.fm-stars{color:#ffd166;font-size:12px;letter-spacing:2px}
+.fm-comment p{font-size:13.5px;color:#c1d2e3}
+.fm-comment .fm-comment-tag{
+  display:inline-block;margin-top:10px;font-size:11px;
+  color:var(--fm-neon2);border:1px solid rgba(64,224,208,.28);
+  border-radius:999px;padding:1px 9px;
+}
+
+/* ============ 动态 / 合作 / FAQ / 投稿 ============ */
+.fm-multi{display:grid;gap:22px;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.fm-panel{
+  border:1px solid var(--fm-line);border-radius:var(--fm-radius);
+  background:rgba(20,36,63,.55);padding:22px;
+}
+.fm-panel > h3{font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.fm-panel > h3::before{content:"";width:3px;height:16px;border-radius:2px;background:var(--fm-neon)}
+.fm-news{display:grid;gap:13px}
+.fm-news li{display:flex;gap:12px;font-size:13.5px;color:#c4d5e6;align-items:baseline}
+.fm-news time{flex:0 0 auto;font-size:11.5px;color:var(--fm-neon);letter-spacing:.04em}
+.fm-partners{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.fm-partner{
+  display:flex;align-items:center;gap:9px;
+  font-size:13px;color:#bccfe2;
+  border:1px solid var(--fm-line);border-radius:10px;padding:10px 12px;
+}
+.fm-partner i{
+  width:24px;height:24px;border-radius:7px;flex:0 0 auto;
+  display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:700;
+  color:#07222b;background:linear-gradient(140deg,#7cf7c4,#40e0d0);
+}
+.fm-partner:nth-child(2n) i{background:linear-gradient(140deg,#ffb27a,#ff7a59)}
+.fm-partner:nth-child(3n) i{background:linear-gradient(140deg,#9fb8ff,#6aa9ff)}
+.fm-faq{display:grid;gap:10px;margin-top:4px}
+.fm-faq details{
+  border:1px solid var(--fm-line);border-radius:12px;
+  background:rgba(255,255,255,.022);padding:0 16px;
+  transition:border-color .2s;
+}
+.fm-faq details[open]{border-color:rgba(64,224,208,.4)}
+.fm-faq summary{
+  list-style:none;cursor:pointer;
+  padding:14px 26px 14px 0;position:relative;
+  font-size:14px;font-weight:600;color:#dceaf7;
+}
+.fm-faq summary::-webkit-details-marker{display:none}
+.fm-faq summary::after{
+  content:"+";position:absolute;right:0;top:12px;
+  color:var(--fm-neon);font-size:18px;transition:transform .2s;
+}
+.fm-faq details[open] summary::after{transform:rotate(45deg)}
+.fm-faq p{font-size:13.5px;color:var(--fm-muted);padding:0 0 15px}
+
+/* ============ 投稿 ============ */
+.fm-submit{
+  border:1px solid rgba(64,224,208,.28);
+  border-radius:20px;padding:32px;
+  background:linear-gradient(135deg,rgba(18,58,74,.6),rgba(16,30,56,.7));
+  display:grid;gap:22px;grid-template-columns:minmax(0,1fr) minmax(0,0.7fr);
+  align-items:center;
+}
+.fm-submit h3{font-size:22px;line-height:1.35}
+.fm-submit p{font-size:14px;color:var(--fm-muted);margin-top:10px}
+.fm-submit-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.fm-submit-visual{
+  border:1px dashed rgba(120,190,220,.3);border-radius:14px;
+  padding:20px;display:grid;gap:10px;
+}
+.fm-submit-visual span{font-size:12.5px;color:var(--fm-muted);display:flex;gap:8px}
+.fm-submit-visual span b{color:var(--fm-neon2);font-weight:700}
+
+/* ============ 搜索反馈 ============ */
+.fm-search-note{
+  display:none;margin-top:18px;font-size:13px;
+  border:1px solid rgba(64,224,208,.3);border-radius:12px;
+  padding:12px 16px;color:var(--fm-neon2);background:rgba(64,224,208,.07);
+}
+.fm-search-note.is-on{display:block}
+
+/* ============ 页脚 ============ */
+.fm-footer{
+  border-top:1px solid var(--fm-line);
+  background:#081120;padding:52px 0 28px;
+}
+.fm-footer-grid{
+  display:grid;gap:32px;
+  grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));
+}
+.fm-footer-brand p{font-size:13px;color:var(--fm-muted);margin-top:12px;max-width:340px}
+.fm-footer h4{font-size:13.5px;letter-spacing:.1em;color:#e2edf8;margin-bottom:13px}
+.fm-footer-list{display:grid;gap:9px}
+.fm-footer-list a,.fm-footer-list span{font-size:13px;color:var(--fm-muted);transition:color .2s}
+.fm-footer-list a:hover{color:var(--fm-neon2)}
+.fm-footer-bottom{
+  margin-top:36px;padding-top:20px;border-top:1px solid var(--fm-line);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:12px;color:var(--fm-dim);
+}
+
+/* ============ Toast / 弹窗 / 回顶 ============ */
+.fm-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:rgba(9,20,36,.96);border:1px solid rgba(64,224,208,.5);
+  color:var(--fm-neon2);font-size:13px;padding:11px 20px;border-radius:12px;
+  opacity:0;pointer-events:none;transition:.3s;z-index:200;
+  box-shadow:0 18px 40px -20px rgba(0,0,0,.9);
+}
+.fm-toast.is-on{opacity:1;transform:translate(-50%,0)}
+.fm-modal{
+  position:fixed;inset:0;z-index:190;
+  background:rgba(4,10,20,.78);backdrop-filter:blur(5px);
+  display:none;place-items:center;padding:24px;
+}
+.fm-modal.is-on{display:grid}
+.fm-modal-card{
+  width:100%;max-width:520px;max-height:82vh;overflow:auto;
+  background:linear-gradient(160deg,#14243f,#0e1a2e);
+  border:1px solid rgba(120,190,220,.3);
+  border-radius:18px;padding:26px;
+}
+.fm-modal-card h3{font-size:19px;margin-bottom:12px}
+.fm-modal-card p,.fm-modal-card li{font-size:13.5px;color:var(--fm-muted)}
+.fm-modal-card ul{display:grid;gap:8px;margin-top:10px}
+.fm-modal-card .fm-modal-foot{margin-top:20px;display:flex;justify-content:flex-end;gap:10px}
+.fm-backtop{
+  position:fixed;right:22px;bottom:26px;z-index:150;
+  width:44px;height:44px;border-radius:12px;
+  background:rgba(64,224,208,.14);border:1px solid rgba(64,224,208,.45);
+  color:var(--fm-neon2);display:grid;place-items:center;font-size:17px;
+  opacity:0;pointer-events:none;transition:.25s;
+}
+.fm-backtop.is-on{opacity:1;pointer-events:auto}
+.fm-backtop:hover{background:rgba(64,224,208,.24)}
+
+/* ============ 响应式 ============ */
+@media (max-width:1080px){
+  .fm-hero-grid{grid-template-columns:minmax(0,1fr);gap:34px}
+  .fm-hero-visual{aspect-ratio:16/10;max-width:640px}
+  .fm-explain-grid{grid-template-columns:minmax(0,1fr)}
+  .fm-explain figure{position:static;max-width:620px}
+  .fm-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fm-board-grid{grid-template-columns:minmax(0,1fr)}
+  .fm-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:880px){
+  .fm-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:rgba(9,18,34,.98);border-bottom:1px solid var(--fm-line);
+    padding:10px 18px 18px;flex-direction:column;gap:2px;
+  }
+  .fm-nav.is-open{display:flex}
+  .fm-nav a{padding:11px 10px;border-radius:8px;font-size:14.5px}
+  .fm-burger{display:grid}
+  .fm-header-tools .fm-btn-ghost{display:none}
+  .fm-search input{width:96px}
+  .fm-hero{padding:36px 0 46px}
+  .fm-section{padding:52px 0}
+  .fm-topic-grid,.fm-author-grid,.fm-comment-grid,.fm-multi,.fm-submit{grid-template-columns:minmax(0,1fr)}
+  .fm-hero-stats{grid-template-columns:minmax(0,1fr);gap:10px}
+  .fm-stat strong{font-size:20px}
+}
+@media (max-width:620px){
+  .fm-wrap{padding:0 16px}
+  .fm-video-grid{grid-template-columns:minmax(0,1fr)}
+  .fm-header-inner{gap:14px;padding-top:11px;padding-bottom:11px}
+  .fm-brand-text span{letter-spacing:.12em}
+  .fm-search{padding:5px 6px 5px 11px}
+  .fm-search input{width:80px;font-size:12.5px}
+  .fm-footer-grid{grid-template-columns:minmax(0,1fr)}
+  .fm-notice .fm-wrap{font-size:12px}
+  .fm-submit{padding:24px 20px}
+  .fm-author{flex-direction:column}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ============ 吸顶：公告条 + 页头 ============ -->
+<div class="fm-fixed-top">
+  <div class="fm-notice">
+    <div class="fm-wrap">
+      <span class="fm-notice-badge">官方发布</span>
+      <div class="fm-notice-track">
+        <span><b>11月21日</b> 飞魔幻小说排行榜第 47 期榜单更新，《山海折枝录》连续三周登顶</span>
+        <span><b>11月20日</b> 新增「新书速递」专区，本周收录 128 部原创长篇</span>
+        <span><b>11月18日</b> 年度创作者大赛报名通道开启，总奖池 30 万元</span>
+        <span><b>11月21日</b> 飞魔幻小说排行榜第 47 期榜单更新，《山海折枝录》连续三周登顶</span>
+        <span><b>11月20日</b> 新增「新书速递」专区，本周收录 128 部原创长篇</span>
+        <span><b>11月18日</b> 年度创作者大赛报名通道开启，总奖池 30 万元</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="fm-header">
+    <div class="fm-wrap fm-header-inner">
+      <a class="fm-brand" href="#fm-top" aria-label="飞魔幻小说排行榜官方网站首页">
+        <span class="fm-brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3 19 L8.4 6 L12 13.4 L15.6 7 L21 19 Z" fill="#40e0d0"/>
+            <circle cx="12" cy="4" r="1.7" fill="#ff7a59"/>
+          </svg>
+        </span>
+        <span class="fm-brand-text">
+          <strong>飞魔幻小说排行榜</strong>
+          <span>FEI MO HUAN · OFFICIAL</span>
+        </span>
+      </a>
+
+      <nav class="fm-nav" id="fmNav" aria-label="主导航">
+        <a href="#fm-top">首页</a>
+        <a href="#fm-ranking">榜单</a>
+        <a href="#fm-videos">视频精选</a>
+        <a href="#fm-topics">专题企划</a>
+        <a href="#fm-authors">创作者</a>
+        <a href="#fm-voices">用户口碑</a>
+        <a href="#fm-updates">企业动态</a>
+        <a href="#fm-faq">帮助中心</a>
+      </nav>
+
+      <div class="fm-header-tools">
+        <form class="fm-search" id="fmSearchForm" role="search">
+          <label class="fm-sr" for="fmSearchInput">搜索榜单、作品或创作者</label>
+          <input id="fmSearchInput" type="search" placeholder="搜作品 / 作者 / 专题" autocomplete="off">
+          <button type="submit">搜索</button>
+        </form>
+        <button class="fm-btn-ghost" type="button" data-fm-submit>我要投稿</button>
+        <button class="fm-burger" id="fmBurger" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="fmNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="fm-top">
+
+  <!-- ============ 首屏 ============ -->
+  <section class="fm-hero" aria-labelledby="fmHeroTitle">
+    <div class="fm-wrap fm-hero-grid">
+      <div class="fm-hero-copy">
+        <span class="fm-hero-badge"><i aria-hidden="true"></i>官方网站 · 玄幻阅读视频门户</span>
+        <h1 id="fmHeroTitle">飞魔幻小说排行榜<br><span class="fm-grad">看清每一部好故事</span></h1>
+        <p class="fm-hero-desc">
+          作为深耕华语玄幻、仙侠与奇幻文学的原创内容品牌，飞魔幻小说排行榜官方网站以榜单为骨架、以视频为语言，把每一部作品的热度、口碑与创作者故事讲清楚。我们为读者提供可信赖的选书入口，也为企业与创作者搭建高品质内容生态。
+        </p>
+        <div class="fm-hero-actions">
+          <a class="fm-btn-primary" href="#fm-ranking">查看第 47 期榜单 →</a>
+          <button class="fm-btn-line" type="button" data-fm-submit>报名年度创作者大赛</button>
+          <button class="fm-btn-line" type="button" data-fm-share>分享本页</button>
+        </div>
+        <div class="fm-hero-stats">
+          <div class="fm-stat"><strong>12,860+</strong><span>在榜原创作品</span></div>
+          <div class="fm-stat"><strong>326</strong><span>签约合作创作者</span></div>
+          <div class="fm-stat"><strong>47</strong><span>已发布榜单期数</span></div>
+        </div>
+      </div>
+
+      <div class="fm-hero-visual">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 736'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230b1a30'/%3E%3Cstop offset='.55' stop-color='%2313294a'/%3E%3Cstop offset='1' stop-color='%230a2438'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%2340e0d0' stop-opacity='.9'/%3E%3Cstop offset='1' stop-color='%236aa9ff' stop-opacity='.25'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='736' fill='url(%23g1)'/%3E%3Ccircle cx='480' cy='150' r='120' fill='%2340e0d0' opacity='.13'/%3E%3Ccircle cx='150' cy='560' r='150' fill='%23ff7a59' opacity='.1'/%3E%3Cpath d='M0 520 L120 380 L210 470 L330 300 L450 430 L560 330 L640 400 L640 736 L0 736 Z' fill='%2311293f' opacity='.85'/%3E%3Cpath d='M0 590 L140 470 L260 560 L380 430 L520 540 L640 470 L640 736 L0 736 Z' fill='url(%23g2)' opacity='.55'/%3E%3Cg stroke='%2340e0d0' stroke-width='1.4' opacity='.4' fill='none'%3E%3Cpath d='M320 120 L400 250 L320 380 L240 250 Z'/%3E%3Cpath d='M320 180 L365 250 L320 320 L275 250 Z'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.75'%3E%3Ccircle cx='120' cy='150' r='2'/%3E%3Ccircle cx='200' cy='90' r='1.6'/%3E%3Ccircle cx='520' cy='230' r='2.2'/%3E%3Ccircle cx='420' cy='70' r='1.4'/%3E%3Ccircle cx='560' cy='90' r='1.8'/%3E%3Ccircle cx='90' cy='320' r='1.6'/%3E%3C/g%3E%3Cg font-family='sans-serif'%3E%3Ctext x='60' y='620' fill='%237cf7c4' font-size='15' letter-spacing='5'%3EISSUE 47%3C/text%3E%3Ctext x='60' y='660' fill='%23c9dcee' font-size='34' font-weight='bold'%3E%E7%A5%9E%E5%B9%BB%E6%A6%9C%E5%8D%95%3C/text%3E%3Ctext x='60' y='694' fill='%23889fb9' font-size='15'%3E%E5%B9%B4%E5%BA%A6%E5%8F%A3%E7%A2%91%E4%B8%8E%E7%83%AD%E5%BA%A6%E5%8F%8C%E7%BB%B4%E8%AF%84%E4%BC%B0%3C/text%3E%3C/g%3E%3C/svg%3E"
+             alt="飞魔幻小说排行榜第47期神幻榜单主视觉，冷色夜空与山峦剪影构成榜单封面" width="640" height="736">
+        <div class="fm-hero-rank">
+          <p>本期 TOP 3 实时热度</p>
+          <ol>
+            <li><span>山海折枝录</span></li>
+            <li><span>九霄灯书人</span></li>
+            <li><span>焚星渡</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 品牌解析（长文） ============ -->
+  <section class="fm-section fm-section-alt" aria-labelledby="fmAboutTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <div>
+          <span class="fm-eyebrow">品牌解析</span>
+          <h2 class="fm-h2" id="fmAboutTitle">飞魔幻小说排行榜<em>为什么值得被相信</em></h2>
+          <p class="fm-lead">一个榜单的价值，不在于它把谁排在第一，而在于它用什么标准、由谁评估、又愿意为结果承担多少责任。</p>
+        </div>
+      </div>
+
+      <div class="fm-explain-grid">
+        <div class="fm-prose">
+          <h3>一、榜单从哪来：三层数据与一道人工复核</h3>
+          <p>飞魔幻小说排行榜的每一次更新，都不是简单的票数相加。我们把一部作品在平台上的表现拆成三层：<strong>阅读层</strong>关注章节完读率、追更留存与单章回看率；<strong>互动层</strong>统计评论密度、长评占比、同人二创数量与话题讨论热度；<strong>口碑层</strong>则由 48 位签约书评人与 1,200 名读者评审团共同打分，权重占最终结果的 30%。三层数据在每周四零点冻结，随后进入人工复核环节，由编辑部逐条排除刷量、异常集中评论与标题党诱导数据。</p>
+          <p>很多读者好奇，为什么某些在别处风光无限的作品，在飞魔幻小说排行榜上只排在十几位。原因往往是它在口碑层失分严重——阅读量可以买，讨论热度可以运营，但一份写了两千字、逐章拆解人物动机的长评，很难造假。我们更愿意把榜单做成一面<strong>略带固执的镜子</strong>，而不是一张随时可以调整的名片。</p>
+
+          <h3>二、视频如何参与：把“榜单名次”变成“阅读理由”</h3>
+          <p>飞魔幻小说排行榜是行业内较早把榜单与视频内容深度绑定的品牌。每一期榜单发布后，我们会围绕前十名制作三种视频：<strong>三分钟速览</strong>解决“这本书讲什么”，<strong>世界观拆解</strong>回答“设定是否自洽”，<strong>作者访谈</strong>呈现“是谁写了它”。视频不追求戏剧化的反转，也不靠夸张的配乐推动情绪，而是尽量让画面服务于文本——山川、灯火、符纹、刀锋，这些读者在文字里想象的意象，被重新画出来，供人对照。</p>
+          <p>截至目前，官方视频栏目累计上线 1,046 条内容，其中《世界观拆解》系列单集平均完播率达到 61%。这个数字在长视频领域并不惊人，但对一个以设定讲解为主的栏目而言，说明观众愿意为<strong>有信息密度的内容</strong>停留。我们因此更加确信：榜单站的价值不是让人快速划走，而是让人愿意坐下来，把一部作品看清楚。</p>
+
+          <h3>三、创作者生态：从“上榜”到“被看见”</h3>
+          <p>榜单是结果，生态才是原因。飞魔幻小说排行榜持续运营的创作者计划，覆盖新人扶持、连载激励、完本奖励与影视化对接四个阶段。过去一年，共有 326 位创作者通过官方渠道签约，其中 74 位是首次发表长篇的新人；平台为新人提供的“首章诊断”服务，会由资深编辑逐段标注节奏问题、视角混乱与设定漏洞，平均反馈周期 3.5 个工作日。</p>
+          <p>我们不认为所有作品都应该长成同一个样子。有人擅长构建宏大体系，有人偏爱市井烟火里的一点灵光，有人写的是少年仗剑，有人写的是归人煮茶。榜单的意义，是让不同类型的作品在自己的赛道上被公平比较，而不是把所有故事塞进同一个模具。这也是我们坚持把<strong>多元</strong>写进评审标准的原因——一个只有单一审美的榜单，最终会失去所有读者。</p>
+
+          <h3>四、读者这一端：我们提供入口，也提供退路</h3>
+          <p>对读者而言，飞魔幻小说排行榜希望承担的是“选书入口”的角色。每周四更新榜单，每月发布品类细分榜，每季度推出年度口碑榜，配合视频解读与书评索引，让不同阅读偏好的人都能找到自己的坐标。同时我们也提供“退路”：如果一部作品让你失望，欢迎在评论区留下具体的失望理由，编辑部会把它整理进季度复盘。差评不是敌人，含糊的赞美才是。</p>
+          <p>这套机制运行了 47 期，我们收到过质疑，也修正过错误。第 31 期曾因数据源异常导致一部作品排名虚高，编辑部在 48 小时内发布更正说明并重排榜单，那一次的公开说明至今仍挂在帮助中心。我们相信，<strong>值得信赖</strong>不是一句口号，而是每一次出错之后，愿不愿意把过程摊开给人看。</p>
+        </div>
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 440'%3E%3Cdefs%3E%3ClinearGradient id='e1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23102540'/%3E%3Cstop offset='1' stop-color='%230c1d33'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='440' fill='url(%23e1)'/%3E%3Cg stroke='%2340e0d0' stroke-width='1.2' opacity='.28'%3E%3Cpath d='M0 110 H640 M0 220 H640 M0 330 H640'/%3E%3Cpath d='M160 0 V440 M320 0 V440 M480 0 V440'/%3E%3C/g%3E%3Cg fill='%2340e0d0'%3E%3Crect x='70' y='300' width='34' height='80' opacity='.75'/%3E%3Crect x='130' y='250' width='34' height='130' opacity='.6'/%3E%3Crect x='190' y='190' width='34' height='190' opacity='.85'/%3E%3Crect x='250' y='230' width='34' height='150' opacity='.55'/%3E%3Crect x='310' y='140' width='34' height='240' opacity='.9'/%3E%3Crect x='370' y='200' width='34' height='180' opacity='.6'/%3E%3Crect x='430' y='110' width='34' height='270' opacity='.8'/%3E%3Crect x='490' y='170' width='34' height='210' opacity='.5'/%3E%3Crect x='550' y='90' width='34' height='290' opacity='.7'/%3E%3C/g%3E%3Cg fill='%23ff7a59'%3E%3Ccircle cx='207' cy='180' r='5'/%3E%3Ccircle cx='327' cy='130' r='5'/%3E%3Ccircle cx='447' cy='100' r='5'/%3E%3C/g%3E%3Cpath d='M0 380 H640' stroke='%23ffffff' stroke-opacity='.25' stroke-width='1.5'/%3E%3Ctext x='40' y='60' fill='%237cf7c4' font-size='14' letter-spacing='4' font-family='sans-serif'%3EDATA LAYERS%3C/text%3E%3Ctext x='40' y='425' fill='%236c84a3' font-size='12' font-family='sans-serif'%3E阅读层 / 互动层 / 口碑层 三维加权%3C/text%3E%3C/svg%3E"
+               alt="飞魔幻小说排行榜三层数据加权与口碑评审的可视化图表" width="640" height="440">
+          <figcaption>榜单评估模型示意：阅读层 40%＋互动层 30%＋口碑层 30%，每周四人工作复核。</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 榜单 ============ -->
+  <section class="fm-section" id="fm-ranking" aria-labelledby="fmRankTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <div>
+          <span class="fm-eyebrow">第 47 期 · 11月21日更新</span>
+          <h2 class="fm-h2" id="fmRankTitle">飞魔幻小说排行榜<em>热度 · 新人 · 口碑</em>三榜同步</h2>
+          <p class="fm-lead">三个榜单，三种看法。热度榜看当下，新人榜看未来，口碑榜看一部作品能不能留到明年。</p>
+        </div>
+        <a class="fm-btn-line" href="#fm-videos">进入视频解读</a>
+      </div>
+
+      <div class="fm-board-grid">
+        <div class="fm-board">
+          <h3><b>热度</b>本周追更热度榜</h3>
+          <ol>
+            <li><div>山海折枝录 <span>／ 云墟</span></div><em>98.6</em></li>
+            <li><div>九霄灯书人 <span>／ 沈砚白</span></div><em>96.2</em></li>
+            <li><div>焚星渡 <span>／ 鹤川</span></div><em>94.7</em></li>
+            <li><div>青玉案·长夜 <span>／ 半盏灯</span></div><em>91.3</em></li>
+            <li><div>雪落无咎 <span>／ 迟观</span></div><em>89.8</em></li>
+            <li><div>千门引 <span>／ 陆观澜</span></div><em>87.4</em></li>
+          </ol>
+        </div>
+
+        <div class="fm-board">
+          <h3><b class="b2">新人</b>第 47 期新人榜</h3>
+          <ol>
+            <li><div>铜镜里的春分 <span>／ 阿棠</span></div><em>+42</em></li>
+            <li><div>剑在鞘中 <span>／ 白露未晞</span></div><em>+38</em></li>
+            <li><div>雾都捕梦人 <span>／ 江晚</span></div><em>+31</em></li>
+            <li><div>一枝春雪 <span>／ 温故</span></div><em>+27</em></li>
+            <li><div>旧城灯 <span>／ 秦九</span></div><em>+24</em></li>
+          </ol>
+        </div>
+
+        <div class="fm-board">
+          <h3><b class="b3">口碑</b>季度读者口碑榜</h3>
+          <ol>
+            <li><div>山海折枝录 <span>／ 9.4 分</span></div><em>稳定</em></li>
+            <li><div>青玉案·长夜 <span>／ 9.2 分</span></div><em>上升</em></li>
+            <li><div>焚星渡 <span>／ 9.1 分</span></div><em>持平</em></li>
+            <li><div>九霄灯书人 <span>／ 8.9 分</span></div><em>上升</em></li>
+            <li><div>铜镜里的春分 <span>／ 8.8 分</span></div><em>新入</em></li>
+            <li><div>千门引 <span>／ 8.7 分</span></div><em>下降</em></li>
+          </ol>
+        </div>
+      </div>
+
+      <p class="fm-search-note" id="fmSearchNote" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ============ 视频精选 ============ -->
+  <section class="fm-section fm-section-alt" id="fm-videos" aria-labelledby="fmVideoTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <div>
+          <span class="fm-eyebrow">原创 · 高清</span>
+          <h2 class="fm-h2" id="fmVideoTitle">飞魔幻小说排行榜<em>视频精选</em>与书评解读</h2>
+          <p class="fm-lead">每一条视频都对应一次真实的阅读判断。榜单是入口，视频是过程，你的点赞与收藏会进入下一期口碑层数据。</p>
+        </div>
+        <button class="fm-btn-line" type="button" data-fm-share>分享视频合集</button>
+      </div>
+
+      <div class="fm-video-grid" id="fmVideoGrid">
+
+        <article class="fm-video-card">
+          <div class="fm-video-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230c2236'/%3E%3Cstop offset='1' stop-color='%23123a4a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v1)'/%3E%3Ccircle cx='520' cy='80' r='62' fill='%2340e0d0' opacity='.18'/%3E%3Cpath d='M0 300 L100 200 L190 265 L300 150 L410 240 L520 170 L640 250 L640 360 L0 360 Z' fill='%230f2c40'/%3E%3Cpath d='M0 330 L120 250 L240 300 L360 220 L480 290 L640 230 L640 360 L0 360 Z' fill='%23124b52' opacity='.8'/%3E%3Cg stroke='%237cf7c4' opacity='.5' fill='none' stroke-width='1.6'%3E%3Cpath d='M320 90 L350 150 L320 210 L290 150 Z'/%3E%3C/g%3E%3Ctext x='34' y='52' fill='%237cf7c4' font-size='13' letter-spacing='4' font-family='sans-serif'%3EWORLDVIEW%3C/text%3E%3C/svg%3E"
+                 alt="山海折枝录世界观拆解视频封面：青色夜空下的山峦与折枝符号" width="640" height="360">
+            <span class="fm-video-tag">世界观拆解</span>
+            <span class="fm-video-play" aria-hidden="true"><i>▶</i></span>
+          </div>
+          <div class="fm-video-body">
+            <h3>《山海折枝录》为什么能连冠三周：一套不讨巧的世界观</h3>
+            <p class="fm-video-desc">从“折枝”仪式的设定源头讲起，拆解这部作品如何在第九十万字仍保持逻辑自洽，并对比同类题材常见的三个塌陷点。</p>
+            <div class="fm-video-meta"><span>播放 18.4万</span><span>点赞 2.1万</span><span>收藏 8,642</span><span>12:38</span></div>
+            <div class="fm-video-foot">
+              <div class="fm-author-chip"><span class="fm-avatar">墟</span>云墟</div>
+              <div class="fm-actions">
+                <button class="fm-act" type="button" data-fm-like aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-8.5C.9 9.1 2.6 5.5 6.2 5.1c2-.2 3.8 1 5.8 3.4 2-2.4 3.8-3.6 5.8-3.4 3.6.4 5.3 4 3.5 7.4C19 16.6 12 21 12 21z"/></svg>
+                  <span>赞</span>
+                </button>
+                <button class="fm-act" type="button" data-fm-save aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+                  <span>收藏</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="fm-video-card">
+          <div class="fm-video-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23241518'/%3E%3Cstop offset='1' stop-color='%233a2018'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v2)'/%3E%3Ccircle cx='320' cy='200' r='110' fill='%23ff7a59' opacity='.22'/%3E%3Cg stroke='%23ffb27a' stroke-width='2' fill='none' opacity='.75'%3E%3Cpath d='M200 260 Q320 90 440 260'/%3E%3Cpath d='M240 260 Q320 140 400 260'/%3E%3C/g%3E%3Cg fill='%23ffe08a'%3E%3Ccircle cx='300' cy='180' r='3'/%3E%3Ccircle cx='340' cy='160' r='2.4'/%3E%3Ccircle cx='370' cy='200' r='2.8'/%3E%3Ccircle cx='270' cy='210' r='2.2'/%3E%3C/g%3E%3Cpath d='M0 300 Q160 250 320 300 T640 300 L640 360 L0 360 Z' fill='%231c1216'/%3E%3Ctext x='34' y='52' fill='%23ffb27a' font-size='13' letter-spacing='4' font-family='sans-serif'%3EINTERVIEW%3C/text%3E%3C/svg%3E"
+                 alt="九霄灯书人作者沈砚白访谈视频封面：暖橙灯火与拱桥线条" width="640" height="360">
+            <span class="fm-video-tag">作者访谈</span>
+            <span class="fm-video-play" aria-hidden="true"><i>▶</i></span>
+          </div>
+          <div class="fm-video-body">
+            <h3>沈砚白：写了六年才敢写“灯”这个意象</h3>
+            <p class="fm-video-desc">从旧书店店员到榜单第二，《九霄灯书人》作者谈自己如何把生活里的煤油味写进仙侠，也谈了一次被退稿十七次的经历。</p>
+            <div class="fm-video-meta"><span>播放 11.2万</span><span>点赞 1.4万</span><span>收藏 5,130</span><span>21:05</span></div>
+            <div class="fm-video-foot">
+              <div class="fm-author-chip"><span class="fm-avatar v2">砚</span>沈砚白</div>
+              <div class="fm-actions">
+                <button class="fm-act" type="button" data-fm-like aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-8.5C.9 9.1 2.6 5.5 6.2 5.1c2-.2 3.8 1 5.8 3.4 2-2.4 3.8-3.6 5.8-3.4 3.6.4 5.3 4 3.5 7.4C19 16.6 12 21 12 21z"/></svg>
+                  <span>赞</span>
+                </button>
+                <button class="fm-act" type="button" data-fm-save aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+                  <span>收藏</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="fm-video-card">
+          <div class="fm-video-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23101833'/%3E%3Cstop offset='1' stop-color='%23222b52'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v3)'/%3E%3Cg stroke='%236aa9ff' stroke-width='1.5' opacity='.55' fill='none'%3E%3Ccircle cx='320' cy='180' r='96'/%3E%3Ccircle cx='320' cy='180' r='64'/%3E%3Ccircle cx='320' cy='180' r='32'/%3E%3Cpath d='M224 180 H416 M320 84 V276'/%3E%3C/g%3E%3Cg fill='%239fb8ff'%3E%3Ccircle cx='320' cy='84' r='4'/%3E%3Ccircle cx='416' cy='180' r='4'/%3E%3Ccircle cx='320' cy='276' r='4'/%3E%3Ccircle cx='224' cy='180' r='4'/%3E%3C/g%3E%3Ctext x='34' y='52' fill='%239fb8ff' font-size='13' letter-spacing='4' font-family='sans-serif'%3ECOMPARE%3C/text%3E%3C/svg%3E"
+                 alt="年度玄幻作品横向测评视频封面：蓝紫色同心圆与坐标线" width="640" height="360">
+            <span class="fm-video-tag">深度测评</span>
+            <span class="fm-video-play" aria-hidden="true"><i>▶</i></span>
+          </div>
+          <div class="fm-video-body">
+            <h3>十部年度玄幻横向测评：设定、节奏与情绪的三个维度</h3>
+            <p class="fm-video-desc">编辑部用同一套评分表读了十部候选作品，从开篇三十章的五感密度到中段的结构耐力，逐项给出可对照的分数。</p>
+            <div class="fm-video-meta"><span>播放 9.8万</span><span>点赞 9,720</span><span>收藏 4,408</span><span>16:47</span></div>
+            <div class="fm-video-foot">
+              <div class="fm-author-chip"><span class="fm-avatar v3">评</span>榜单编辑部</div>
+              <div class="fm-actions">
+                <button class="fm-act" type="button" data-fm-like aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-8.5C.9 9.1 2.6 5.5 6.2 5.1c2-.2 3.8 1 5.8 3.4 2-2.4 3.8-3.6 5.8-3.4 3.6.4 5.3 4 3.5 7.4C19 16.6 12 21 12 21z"/></svg>
+                  <span>赞</span>
+                </button>
+                <button class="fm-act" type="button" data-fm-save aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+                  <span>收藏</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="fm-video-card">
+          <div class="fm-video-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v4' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231a1730'/%3E%3Cstop offset='1' stop-color='%232e1f45'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v4)'/%3E%3Cg stroke='%23d7a6ff' stroke-width='2' fill='none' opacity='.7'%3E%3Cpath d='M120 290 Q200 120 320 210 T520 120'/%3E%3C/g%3E%3Cg fill='%23d7a6ff'%3E%3Ccircle cx='200' cy='200' r='6'/%3E%3Ccircle cx='320' cy='210' r='8'/%3E%3Ccircle cx='430' cy='160' r='5'/%3E%3C/g%3E%3Cg fill='%23ffe08a' opacity='.85'%3E%3Ccircle cx='520' cy='120' r='3'/%3E%3Ccircle cx='150' cy='140' r='2.6'/%3E%3Ccircle cx='380' cy='90' r='2.4'/%3E%3C/g%3E%3Ctext x='34' y='52' fill='%23d7a6ff' font-size='13' letter-spacing='4' font-family='sans-serif'%3EBEGINNER%3C/text%3E%3C/svg%3E"
+                 alt="新人榜作者阿棠创作幕后视频封面：紫色手绘曲线与光点轨迹" width="640" height="360">
+            <span class="fm-video-tag">创作幕后</span>
+            <span class="fm-video-play" aria-hidden="true"><i>▶</i></span>
+          </div>
+          <div class="fm-video-body">
+            <h3>新人榜第一是怎么写出来的：阿棠的三十天连载日记</h3>
+            <p class="fm-video-desc">从一张便利贴上的三行设定，到新人榜第一，《铜镜里的春分》作者记录了三十天里每天的真实写作时长与推翻重写的次数。</p>
+            <div class="fm-video-meta"><span>播放 7.4万</span><span>点赞 7,830</span><span>收藏 3,916</span><span>14:12</span></div>
+            <div class="fm-video-foot">
+              <div class="fm-author-chip"><span class="fm-avatar v4">棠</span>阿棠</div>
+              <div class="fm-actions">
+                <button class="fm-act" type="button" data-fm-like aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-8.5C.9 9.1 2.6 5.5 6.2 5.1c2-.2 3.8 1 5.8 3.4 2-2.4 3.8-3.6 5.8-3.4 3.6.4 5.3 4 3.5 7.4C19 16.6 12 21 12 21z"/></svg>
+                  <span>赞</span>
+                </button>
+                <button class="fm-act" type="button" data-fm-save aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+                  <span>收藏</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="fm-video-card">
+          <div class="fm-video-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v5' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230d2331'/%3E%3Cstop offset='1' stop-color='%23144550'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v5)'/%3E%3Cg fill='none' stroke='%2340e0d0' stroke-width='1.6' opacity='.65'%3E%3Crect x='90' y='130' width='120' height='80' rx='6'/%3E%3Crect x='250' y='100' width='140' height='110' rx='6'/%3E%3Crect x='430' y='140' width='110' height='70' rx='6'/%3E%3C/g%3E%3Cpath d='M210 170 H250 M390 155 H430' stroke='%237cf7c4' stroke-width='2'/%3E%3Cg fill='%237cf7c4'%3E%3Ccircle cx='112' cy='152' r='3'/%3E%3Ccircle cx='272' cy='122' r='3'/%3E%3Ccircle cx='452' cy='162' r='3'/%3E%3C/g%3E%3Ctext x='34' y='52' fill='%237cf7c4' font-size='13' letter-spacing='4' font-family='sans-serif'%3EGUIDE%3C/text%3E%3C/svg%3E"
+                 alt="新手选书攻略视频封面：青色卡片式结构图与连接线" width="640" height="360">
+            <span class="fm-video-tag">实用攻略</span>
+            <span class="fm-video-play" aria-hidden="true"><i>▶</i></span>
+          </div>
+          <div class="fm-video-body">
+            <h3>从榜单挑选第一本玄幻的五个方法（附避坑清单）</h3>
+            <p class="fm-video-desc">看评分不如看分布。这条视频教你如何用榜单里的完读率、长评密度与章节评论，判断一本书适不适合自己。</p>
+            <div class="fm-video-meta"><span>播放 6.9万</span><span>点赞 6,104</span><span>收藏 5,872</span><span>09:26</span></div>
+            <div class="fm-video-foot">
+              <div class="fm-author-chip"><span class="fm-avatar">灯</span>半盏灯</div>
+              <div class="fm-actions">
+                <button class="fm-act" type="button" data-fm-like aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-8.5C.9 9.1 2.6 5.5 6.2 5.1c2-.2 3.8 1 5.8 3.4 2-2.4 3.8-3.6 5.8-3.4 3.6.4 5.3 4 3.5 7.4C19 16.6 12 21 12 21z"/></svg>
+                  <span>赞</span>
+                </button>
+                <button class="fm-act" type="button" data-fm-save aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+                  <span>收藏</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="fm-video-card">
+          <div class="fm-video-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v6' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23231812'/%3E%3Cstop offset='1' stop-color='%23382a17'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v6)'/%3E%3Cg stroke='%23f7c948' stroke-width='1.6' fill='none' opacity='.6'%3E%3Cpath d='M80 280 Q200 180 320 240 T560 180'/%3E%3C/g%3E%3Cg fill='%23ffe08a'%3E%3Ccircle cx='200' cy='220' r='5'/%3E%3Ccircle cx='320' cy='240' r='7'/%3E%3Ccircle cx='440' cy='205' r='4'/%3E%3C/g%3E%3Cpath d='M0 300 L640 300 L640 360 L0 360 Z' fill='%23201511'/%3E%3Cg fill='%23f7c948' opacity='.9'%3E%3Crect x='120' y='150' width='8' height='40' rx='3'/%3E%3Crect x='150' y='130' width='8' height='60' rx='3'/%3E%3Crect x='180' y='165' width='8' height='25' rx='3'/%3E%3C/g%3E%3Ctext x='34' y='52' fill='%23f7c948' font-size='13' letter-spacing='4' font-family='sans-serif'%3EISSUE%3C/text%3E%3C/svg%3E"
+                 alt="第47期榜单发布解读视频封面：暗金色曲线与均衡器图形" width="640" height="360">
+            <span class="fm-video-tag">榜单解读</span>
+            <span class="fm-video-play" aria-hidden="true"><i>▶</i></span>
+          </div>
+          <div class="fm-video-body">
+            <h3>第 47 期榜单全解读：三人首次进前十，两部长篇掉出榜外</h3>
+            <p class="fm-video-desc">编辑部逐项说明本期名次变动的原因，包括数据冻结前后的异常波动排查过程，以及口碑层新增的两条评审细则。</p>
+            <div class="fm-video-meta"><span>播放 5.6万</span><span>点赞 4,922</span><span>收藏 2,180</span><span>18:30</span></div>
+            <div class="fm-video-foot">
+              <div class="fm-author-chip"><span class="fm-avatar v3">榜</span>榜单编辑部</div>
+              <div class="fm-actions">
+                <button class="fm-act" type="button" data-fm-like aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-8.5C.9 9.1 2.6 5.5 6.2 5.1c2-.2 3.8 1 5.8 3.4 2-2.4 3.8-3.6 5.8-3.4 3.6.4 5.3 4 3.5 7.4C19 16.6 12 21 12 21z"/></svg>
+                  <span>赞</span>
+                </button>
+                <button class="fm-act" type="button" data-fm-save aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+                  <span>收藏</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 专题企划 ============ -->
+  <section class="fm-section" id="fm-topics" aria-labelledby="fmTopicTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <div>
+          <span class="fm-eyebrow">专题企划</span>
+          <h2 class="fm-h2" id="fmTopicTitle">飞魔幻小说排行榜<em>正在进行的四组企划</em></h2>
+          <p class="fm-lead">榜单之外，我们还想把一些值得慢慢聊的话题做成序列内容。每个专题由编辑部与创作者共同策划。</p>
+        </div>
+      </div>
+
+      <div class="fm-topic-grid">
+        <article class="fm-topic">
+          <div class="fm-topic-head">
+            <h3>专题一 · 东方幻想的器物志</h3>
+            <span class="fm-status">更新中 · 已上线 8 期</span>
+          </div>
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 280'%3E%3Cdefs%3E%3ClinearGradient id='t1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23122940'/%3E%3Cstop offset='1' stop-color='%231c4550'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='280' fill='url(%23t1)'/%3E%3Cg stroke='%2340e0d0' stroke-width='1.6' fill='none' opacity='.7'%3E%3Cpath d='M120 210 L200 90 L280 210 Z'/%3E%3Ccircle cx='400' cy='150' r='52'/%3E%3Crect x='480' y='110' width='70' height='70' rx='8'/%3E%3C/g%3E%3Cg fill='%237cf7c4'%3E%3Ccircle cx='200' cy='90' r='4'/%3E%3Ccircle cx='400' cy='98' r='3'/%3E%3Ccircle cx='515' cy='145' r='3'/%3E%3C/g%3E%3C/svg%3E"
+                 alt="东方幻想的器物志专题视觉：三角、圆与方形的器物符号组合" width="640" height="280">
+          </figure>
+          <p class="fm-topic-desc">从灯、镜、剑、铃四类常见意象出发，讨论器物在玄幻叙事里如何承担情绪与秩序，而不是单纯的道具。</p>
+          <ul class="fm-topic-list">
+            <li>灯：为什么“照亮”总与代价绑定</li>
+            <li>镜：镜中世界的三条叙事规则</li>
+            <li>剑：从杀器到信物的形象迁移</li>
+          </ul>
+        </article>
+
+        <article class="fm-topic">
+          <div class="fm-topic-head">
+            <h3>专题二 · 新人的第一部长篇</h3>
+            <span class="fm-status b">筹备中 · 已上线 3 期</span>
+          </div>
+          <p class="fm-topic-desc">邀请新人榜作者复盘自己的处女作：从选题、日更节奏到放弃与坚持的临界点，尽量保留那些不体面的细节。</p>
+          <ul class="fm-topic-list">
+            <li>阿棠：三十天写完十八万字之后</li>
+            <li>白露未晞：我把武侠写成了慢生活</li>
+            <li>编辑手记：新人最常犯的五个结构错误</li>
+          </ul>
+        </article>
+
+        <article class="fm-topic">
+          <div class="fm-topic-head">
+            <h3>专题三 · 口碑是怎么被写坏的</h3>
+            <span class="fm-status">更新中 · 已上线 5 期</span>
+          </div>
+          <p class="fm-topic-desc">一组关于刷分、控评与读者信任的行业观察。我们不点名，但会把机制拆开，让每位读者看得懂榜单为何需要防守。</p>
+          <ul class="fm-topic-list">
+            <li>数据异常排查的九个信号</li>
+            <li>长评为什么比短评更难造假</li>
+            <li>一次更正说明的完整复盘（第 31 期）</li>
+          </ul>
+        </article>
+
+        <article class="fm-topic">
+          <div class="fm-topic-head">
+            <h3>专题四 · 城市里的幻想现场</h3>
+            <span class="fm-status b">征集投稿中</span>
+          </div>
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 280'%3E%3Cdefs%3E%3ClinearGradient id='t4' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23241930'/%3E%3Cstop offset='1' stop-color='%23301b3f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='280' fill='url(%23t4)'/%3E%3Cg fill='%23d7a6ff' opacity='.55'%3E%3Crect x='70' y='150' width='46' height='90'/%3E%3Crect x='130' y='110' width='46' height='130'/%3E%3Crect x='190' y='170' width='46' height='70'/%3E%3Crect x='410' y='140' width='46' height='100'/%3E%3Crect x='470' y='100' width='46' height='140'/%3E%3Crect x='530' y='160' width='46' height='80'/%3E%3C/g%3E%3Cg fill='%23ffe08a'%3E%3Ccircle cx='250' cy='70' r='18' opacity='.8'/%3E%3Ccircle cx='380' cy='90' r='10' opacity='.6'/%3E%3C/g%3E%3C/svg%3E"
+                 alt="城市里的幻想现场专题视觉：紫色街区剪影与两轮月亮" width="640" height="280">
+          </figure>
+          <p class="fm-topic-desc">地铁末班车、深夜便利店、旧楼道里的声控灯——把幻想放回真实城市，看看创作者如何从日常里提取异质感。</p>
+          <ul class="fm-topic-list">
+            <li>夜班便利店的十七个故事</li>
+            <li>旧楼道计划：读者投稿影像合集</li>
+            <li>征集说明：每人限投一篇，截止 12 月 20 日</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 创作者矩阵 ============ -->
+  <section class="fm-section fm-section-alt" id="fm-authors" aria-labelledby="fmAuthorTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <div>
+          <span class="fm-eyebrow">创作者 · 社区</span>
+          <h2 class="fm-h2" id="fmAuthorTitle">飞魔幻小说排行榜<em>签约创作者</em>名录</h2>
+          <p class="fm-lead">榜单上的名字背后是人。以下六位创作者长期参与我们的内容生态，也参与榜单口碑层的评审工作。</p>
+        </div>
+      </div>
+
+      <div class="fm-author-grid">
+        <article class="fm-author">
+          <div class="fm-author-ava">墟</div>
+          <div class="fm-author-info">
+            <h3>云墟 <small>本期榜首</small></h3>
+            <div class="fm-author-meta"><span>擅长：世界构建 / 群像叙事</span><span>作品 6 部</span><span>粉丝 48.2万</span></div>
+            <p class="fm-author-bio">写《山海折枝录》的人。建筑学出身，习惯先画地图再写人物，桌上常年摊着三张手绘地形图。她认为玄幻的爽感来自秩序的建立而非破坏，因此她的故事节奏偏慢，却极少出现设定塌方。过去两年在官方专栏连载创作笔记 24 篇。</p>
+            <a class="fm-author-more" href="#fm-videos" data-fm-author="云墟">查看作者档案 →</a>
+          </div>
+        </article>
+
+        <article class="fm-author">
+          <div class="fm-author-ava a2">砚</div>
+          <div class="fm-author-info">
+            <h3>沈砚白 <small>口碑评审</small></h3>
+            <div class="fm-author-meta"><span>擅长：市井仙侠 / 情绪铺陈</span><span>作品 4 部</span><span>粉丝 33.7万</span></div>
+            <p class="fm-author-bio">前旧书店店员，现全职写作。《九霄灯书人》是他写了六年的故事，缓慢、温热，带着煤油与旧纸的气味。他坚持每天手写两千字初稿，再用键盘改三遍，被编辑戏称为“最费纸张的作者”。他同时担任榜单口碑层评审，以严苛著称。</p>
+            <a class="fm-author-more" href="#fm-videos" data-fm-author="沈砚白">查看作者档案 →</a>
+          </div>
+        </article>
+
+        <article class="fm-author">
+          <div class="fm-author-ava a3">川</div>
+          <div class="fm-author-info">
+            <h3>鹤川 <small>年度提名</small></h3>
+            <div class="fm-author-meta"><span>擅长：硬设定 / 战斗调度</span><span>作品 8 部</span><span>粉丝 41.5万</span></div>
+            <p class="fm-author-bio">《焚星渡》作者，擅长在极短篇幅内完成一次完整的战斗调度。他有数学竞赛背景，喜欢用图论方式设计人物关系，粉丝常在他的评论区画关系网。他较少受访，但每年会为官方视频栏目录制一次长谈，内容多为写作方法而非个人经历。</p>
+            <a class="fm-author-more" href="#fm-videos" data-fm-author="鹤川">查看作者档案 →</a>
+          </div>
+        </article>
+
+        <article class="fm-author">
+          <div class="fm-author-ava a4">棠</div>
+          <div class="fm-author-info">
+            <h3>阿棠 <small>新人榜第一</small></h3>
+            <div class="fm-author-meta"><span>擅长：东方奇幻 / 短篇抒情</span><span>作品 2 部</span><span>粉丝 12.6万</span></div>
+            <p class="fm-author-bio">二十四岁，白天在博物馆做讲解员，晚上写作。《铜镜里的春分》是她第一部长篇，开篇曾被退稿十七次。她的文字有强烈的画面感，常从一件器物写起，慢慢展开一段关系。她说自己最大的优点是肯改，最长的一次改稿持续了四个月。</p>
+            <a class="fm-author-more" href="#fm-videos" data-fm-author="阿棠">查看作者档案 →</a>
+          </div>
+        </article>
+
+        <article class="fm-author">
+          <div class="fm-author-ava a5">灯</div>
+          <div class="fm-author-info">
+            <h3>半盏灯 <small>资深书评人</small></h3>
+            <div class="fm-author-meta"><span>擅长：文本细读 / 结构分析</span><span>作品 3 部</span><span>粉丝 27.9万</span></div>
+            <p class="fm-author-bio">书评人出身的创作者，写作之外长期为官方视频栏目供稿。《青玉案·长夜》融合了古典诗词的句式与侦探小说的推进方式。他主张“评价要给出可验证的依据”，因此在榜单评审会上，他常常是那个要求出示章节页码的人。</p>
+            <a class="fm-author-more" href="#fm-videos" data-fm-author="半盏灯">查看作者档案 →</a>
+          </div>
+        </article>
+
+        <article class="fm-author">
+          <div class="fm-author-ava">晞</div>
+          <div class="fm-author-info">
+            <h3>白露未晞 <small>新人榜第二</small></h3>
+            <div class="fm-author-meta"><span>擅长：武侠 / 生活质感</span><span>作品 3 部</span><span>粉丝 9.8万</span></div>
+            <p class="fm-author-bio">把武侠写成慢生活的实验者。《剑在鞘中》几乎没有正面战斗，主角大部分时间在煮茶、修伞、赶集。她认为江湖的重量不在刀光，而在日常。作品更新稳定，每章结尾都会附一句手写的“今日天气”，成为读者最期待的彩蛋。</p>
+            <a class="fm-author-more" href="#fm-videos" data-fm-author="白露未晞">查看作者档案 →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 用户评价（双列短评） ============ -->
+  <section class="fm-section" id="fm-voices" aria-labelledby="fmVoiceTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <div>
+          <span class="fm-eyebrow">用户口碑</span>
+          <h2 class="fm-h2" id="fmVoiceTitle">他们这样评价<em>飞魔幻小说排行榜</em></h2>
+          <p class="fm-lead">以下评价来自站内读者与创作者的公开留言，含批评与建议，未作删改。</p>
+        </div>
+      </div>
+
+      <div class="fm-comment-grid">
+        <article class="fm-comment">
+          <div class="fm-comment-top"><span class="fm-avatar">林</span><strong>林间有雾</strong><span class="fm-stars" aria-label="评分5星">★★★★★</span><time>11月20日</time></div>
+          <p>用这个榜单三年了，最打动我的不是它排得准，而是每次调整评分规则都会公开说明。第 31 期那次更正我全程围观，能把自己出错的过程摊开写的平台，我愿意继续信。</p>
+          <span class="fm-comment-tag">长期读者</span>
+        </article>
+
+        <article class="fm-comment">
+          <div class="fm-comment-top"><span class="fm-avatar v2">程</span><strong>程小满</strong><span class="fm-stars" aria-label="评分4星">★★★★</span><time>11月19日</time></div>
+          <p>视频解读比我想象中有信息量，尤其世界观拆解那几条，真的一帧一帧讲设定。唯一的问题是有些内容太长了，通勤路上看不完，希望能出个十分钟以内的精华版。</p>
+          <span class="fm-comment-tag">视频用户</span>
+        </article>
+
+        <article class="fm-comment">
+          <div class="fm-comment-top"><span class="fm-avatar v3">江</span><strong>江晚</strong><span class="fm-stars" aria-label="评分5星">★★★★★</span><time>11月18日</time></div>
+          <p>作为新人作者，首章诊断真的有用。编辑给我标了十一处节奏问题，还附了两段改写示例。虽然被批得有点难受，但改完之后追更确实涨了。感谢飞魔幻小说排行榜愿意把资源给没什么名气的人。</p>
+          <span class="fm-comment-tag">签约作者</span>
+        </article>
+
+        <article class="fm-comment">
+          <div class="fm-comment-top"><span class="fm-avatar v4">阿</span><strong>阿柚不吃柿子</strong><span class="fm-stars" aria-label="评分4星">★★★★</span><time>11月17日</time></div>
+          <p>口碑榜的评分分布比总分更有用，我基本只看长评数量。提个建议：能不能加一个按“篇幅偏好”筛选，比如想找三十万字以内能看完的。</p>
+          <span class="fm-comment-tag">功能建议</span>
+        </article>
+
+        <article class="fm-comment">
+          <div class="fm-comment-top"><span class="fm-avatar a5">老</span><strong>老周读书</strong><span class="fm-stars" aria-label="评分5星">★★★★★</span><time>11月16日</time></div>
+          <p>看了你们的年度横向测评，评分表做得比很多传统媒体还认真。作为从纸媒时代过来的人，我很高兴看到网络文学评论能做到这个程度。建议以后把评分表直接做成可下载的表格。</p>
+          <span class="fm-comment-tag">资深书评人</span>
+        </article>
+
+        <article class="fm-comment">
+          <div class="fm-comment-top"><span class="fm-avatar v2">温</span><strong>温故</strong><span class="fm-stars" aria-label="评分4星">★★★★</span><time>11月15日</time></div>
+          <p>新人榜的曝光确实有效，我上榜那周收藏翻了一倍。但也有个小困扰：上榜之后评论区来了不少只打广告的人，希望平台能加强一下评论管理。</p>
+          <span class="fm-comment-tag">新人作者</span>
+        </article>
+
+        <article class="fm-comment">
+          <div class="fm-comment-top"><span class="fm-avatar v3">苏</span><strong>苏门答腊猫</strong><span class="fm-stars" aria-label="评分3星">★★★</span><time>11月14日</time></div>
+          <p>榜单整体是可信的，但热度榜更新太快，周五看到的名次和周日有时差好几名，容易让人焦虑。希望能固定更新时间，或者在页面上标出数据冻结的具体时刻。</p>
+          <span class="fm-comment-tag">改进意见</span>
+        </article>
+
+        <article class="fm-comment">
+          <div class="fm-comment-top"><span class="fm-avatar">一</span><strong>一只旧书签</strong><span class="fm-stars" aria-label="评分5星">★★★★★</span><time>11月13日</time></div>
+          <p>最惊喜的是专题企划。器物志那个系列让我重新理解了“灯”这个意象，后来回头重读《九霄灯书人》，很多细节才看懂。这种把评论做成内容的方式，比单纯打分有意思多了。</p>
+          <span class="fm-comment-tag">专题读者</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 企业动态 + 合作品牌 ============ -->
+  <section class="fm-section fm-section-alt" id="fm-updates" aria-labelledby="fmUpdateTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <div>
+          <span class="fm-eyebrow">企业动态</span>
+          <h2 class="fm-h2" id="fmUpdateTitle">飞魔幻小说排行榜<em>近期官方公告</em></h2>
+          <p class="fm-lead">榜单规则调整、专题上线、活动报名等正式信息，均在此处统一发布。</p>
+        </div>
+      </div>
+
+      <div class="fm-multi">
+        <div class="fm-panel">
+          <h3>官方公告</h3>
+          <ul class="fm-news">
+            <li><time>11.21</time><div>第 47 期榜单发布，新增“章节完读率”权重由 12% 上调至 15%，同步更新评估模型说明文档。</div></li>
+            <li><time>11.18</time><div>年度创作者大赛开放报名，设长篇、短篇、新人三组，总奖池 30 万元，报名截止 12 月 15 日 24:00。</div></li>
+            <li><time>11.12</time><div>“东方幻想的器物志”专题上线第 8 期，累计播放量突破 210 万，专题页新增收藏夹功能。</div></li>
+            <li><time>11.06</time><div>口碑层评审团完成年度换届，48 位书评人中新增 12 位，评审名单与评分细则已在帮助中心公示。</div></li>
+            <li><time>10.29</time><div>官方视频栏目上线高清 1080P 版本，历史内容将在 12 月前完成画质升级。</div></li>
+          </ul>
+        </div>
+
+        <div class="fm-panel">
+          <h3>合作品牌与伙伴</h3>
+          <div class="fm-partners">
+            <div class="fm-partner"><i>纸</i>纸鸢出版社</div>
+            <div class="fm-partner"><i>声</i>声屿有声</div>
+            <div class="fm-partner"><i>光</i>光年影业</div>
+            <div class="fm-partner"><i>砚</i>砚台文创</div>
+            <div class="fm-partner"><i>星</i>星海漫游馆</div>
+            <div class="fm-partner"><i>青</i>青简书城</div>
+          </div>
+          <p style="margin-top:18px;font-size:13px;color:var(--fm-muted)">我们与出版、有声、影视及文创伙伴保持长期内容合作，共同把优质原创故事推向更多媒介。合作咨询请通过页脚联系编辑部。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 投稿 + FAQ ============ -->
+  <section class="fm-section" id="fm-faq" aria-labelledby="fmFaqTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <div>
+          <span class="fm-eyebrow">帮助中心</span>
+          <h2 class="fm-h2" id="fmFaqTitle">关于飞魔幻小说排行榜<em>常见问题</em></h2>
+          <p class="fm-lead">榜单规则、投稿方式、数据说明与版权问题，均可在下方找到答案。</p>
+        </div>
+      </div>
+
+      <div class="fm-submit">
+        <div>
+          <h3>把你的故事交给我们，<br>让榜单成为它的第一个读者</h3>
+          <p>每年开放两轮投稿，支持长篇连载、短篇合集与影像化的故事大纲。官方编辑会在 10 个工作日内给出反馈，无论是否通过都会说明理由。</p>
+          <div class="fm-submit-actions">
+            <button class="fm-btn-primary" type="button" data-fm-submit>立即投稿 / 报名</button>
+            <button class="fm-btn-line" type="button" data-fm-share>分享给写作者</button>
+          </div>
+        </div>
+        <div class="fm-submit-visual">
+          <span><b>投稿方式</b> 在线表单提交（支持 doc / docx / txt）</span>
+          <span><b>反馈周期</b> 10 个工作日内邮件回复</span>
+          <span><b>特别说明</b> 本轮新人通道名额 200 个</span>
+          <span><b>合作联系</b> 出版 / 影视 / 影像化项目请注明</span>
+        </div>
+      </div>
+
+      <div class="fm-faq" style="margin-top:32px">
+        <details>
+          <summary>飞魔幻小说排行榜的排名是怎么算出来的？</summary>
+          <p>榜单由三层数据加权得出：阅读层（40%，含章节完读率、追更留存、单章回看率）、互动层（30%，含评论密度、长评占比、二创数量）、口碑层（30%，由书评人评审团与读者评审团共同打分）。数据每周四零点冻结，随后由编辑部进行人工复核，排除刷量与异常数据后再发布。</p>
+        </details>
+        <details>
+          <summary>为什么我的作品数据不错，却没进榜单？</summary>
+          <p>榜单有最低门槛：作品需连载满 20 章且累计阅读超过 5 万，同时近 30 天有更新。此外，如果作品在口碑层得分偏低（例如长评稀少、评分集中在短时间内异常涌入），也可能暂时无法进入前列。我们会为每位投稿作者提供一次数据说明。</p>
+        </details>
+        <details>
+          <summary>视频栏目里的解读是官方观点吗？</summary>
+          <p>视频由编辑部策划、与创作者或书评人合作制作。涉及评分与排名判断的部分代表官方立场，涉及个人阅读感受的部分会标注讲述者姓名。我们不要求所有讲述者口径一致，不同意见本身也是内容的一部分。</p>
+        </details>
+        <details>
+          <summary>榜单多久更新一次？历史榜单可以查吗？</summary>
+          <p>榜单每周四更新，月度与季度另发细分榜。全部历史榜单（含第 31 期的更正说明）均在站内榜单归档区可查，支持按品类、期数检索。</p>
+        </details>
+        <details>
+          <summary>发现作品存在刷分或抄袭行为，如何反馈？</summary>
+          <p>可通过页脚的联系邮箱提交反馈，附上作品名称、章节位置与对比材料。编辑部承诺在 5 个工作日内初步核实，核实的处理结果会同步至榜单更正说明。我们鼓励实名反馈，也会严格保护反馈者信息。</p>
+        </details>
+        <details>
+          <summary>投稿需要付费吗？版权归属如何？</summary>
+          <p>官方投稿通道不收取任何费用。作品版权始终归作者所有，我们仅就展示、解读与推广获得非独占授权。任何涉及影视、出版的合作均会单独签署协议，由作者自主决定是否参与。</p>
+        </details>
+        <details>
+          <summary>可以申请成为口碑评审吗？</summary>
+          <p>可以。评审团每年换届一次，申请者需提交三篇原创书评作品与一份阅读偏好说明。评审工作为志愿性质，官方提供小额补贴与优先参与专题策划的机会。下一轮申请预计在次年三月开放。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer class="fm-footer">
+  <div class="fm-wrap">
+    <div class="fm-footer-grid">
+      <div class="fm-footer-brand">
+        <a class="fm-brand" href="#fm-top">
+          <span class="fm-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M3 19 L8.4 6 L12 13.4 L15.6 7 L21 19 Z" fill="#40e0d0"/>
+              <circle cx="12" cy="4" r="1.7" fill="#ff7a59"/>
+            </svg>
+          </span>
+          <span class="fm-brand-text">
+            <strong>飞魔幻小说排行榜</strong>
+            <span>FEI MO HUAN · OFFICIAL</span>
+          </span>
+        </a>
+        <p>飞魔幻小说排行榜官方网站，深耕华语玄幻、仙侠与奇幻文学的原创内容品牌。以榜单为骨架、以视频为语言，持续运营值得信赖的阅读内容生态。</p>
+      </div>
+
+      <div>
+        <h4>内容</h4>
+        <div class="fm-footer-list">
+          <a href="#fm-ranking">第 47 期榜单</a>
+          <a href="#fm-videos">视频精选</a>
+          <a href="#fm-topics">专题企划</a>
+          <a href="#fm-authors">创作者名录</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>关于</h4>
+        <div class="fm-footer-list">
+          <a href="#fm-updates">企业动态</a>
+          <a href="#fm-voices">用户口碑</a>
+          <a href="#fm-faq">帮助中心</a>
+          <a href="#fm-faq">投稿与报名</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>联系</h4>
+        <div class="fm-footer-list">
+          <span>合作邮箱：partner@feimohuan.example</span>
+          <span>投稿咨询：submit@feimohuan.example</span>
+          <span>工作时间：周一至周五 10:00–18:00</span>
+          <span>地址：华文数字文创园 B 座 7 层</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fm-footer-bottom">
+      <span>© 2026 飞魔幻小说排行榜 官方网站 · 版权所有 · 持续运营中</span>
+      <span>备案号：文网备 2026-1147 号 · 正版内容 · 用户至上</span>
+    </div>
+  </div>
+</footer>
+
+<button class="fm-backtop" id="fmBackTop" type="button" aria-label="回到顶部">↑</button>
+
+<div class="fm-toast" id="fmToast" role="status" aria-live="polite"></div>
+
+<div class="fm-modal" id="fmModal" role="dialog" aria-modal="true" aria-labelledby="fmModalTitle">
+  <div class="fm-modal-card">
+    <h3 id="fmModalTitle">投稿与报名</h3>
+    <p id="fmModalBody">请通过官方投稿通道提交作品或报名信息，编辑部将在 10 个工作日内反馈。</p>
+    <ul id="fmModalList">
+      <li>投稿材料：作品简介、正文前三章、作者简介</li>
+      <li>报名材料：笔名、联系方式、代表作品说明</li>
+      <li>所有材料仅用于评审，不做其他用途</li>
+    </ul>
+    <div class="fm-modal-foot">
+      <button class="fm-btn-line" type="button" data-fm-close>关闭</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('fmToast');
+  var toastTimer = null;
+  function toast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toastEl.classList.remove('is-on');
+    }, 2200);
+  }
+
+  /* ---- 移动端导航折叠 ---- */
+  var burger = document.getElementById('fmBurger');
+  var nav = document.getElementById('fmNav');
+  if(burger && nav){
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? '收起导航' : '展开导航');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && nav.classList.contains('is-open')){
+        nav.classList.remove('is-open');
+        burger.classList.remove('is-open');
+        burger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* ---- 搜索前端反馈 ---- */
+  var form = document.getElementById('fmSearchForm');
+  var input = document.getElementById('fmSearchInput');
+  var note = document.getElementById('fmSearchNote');
+  var hotTerms = ['山海折枝录','九霄灯书人','焚星渡','新人榜','口碑榜','器物志','阿棠','沈砚白'];
+  if(form && input && note){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var q = input.value.trim();
+      if(!q){
+        note.textContent = '请输入作品名、作者名或专题关键词，例如「山海折枝录」。';
+        note.classList.add('is-on');
+        input.focus();
+        return;
+      }
+      var hit = hotTerms.filter(function(t){
+        return t.indexOf(q) !== -1 || q.indexOf(t) !== -1;
+      });
+      if(hit.length){
+        note.textContent = '已为你在飞魔幻小说排行榜内找到 ' + hit.length + ' 条相关结果：' + hit.join('、') + '。完整结果可在榜单与视频精选区查看。';
+      }else{
+        note.textContent = '暂未匹配到「' + q + '」的直接结果，建议前往榜单区浏览第 47 期热度、新人与口碑三榜。';
+      }
+      note.classList.add('is-on');
+    });
+  }
+
+  /* ---- 点赞 / 收藏 ---- */
+  function countText(btn){
+    var span = btn.querySelector('span');
+    if(!span) return null;
+    if(!span.dataset.num){
+      span.dataset.num = span.textContent;
+    }
+    return span;
+  }
+  document.addEventListener('click', function(e){
+    var like = e.target.closest('[data-fm-like]');
+    if(like){
+      var liked = like.classList.toggle('is-liked');
+      like.setAttribute('aria-pressed', liked ? 'true' : 'false');
+      var ls = countText(like);
+      if(ls){
+        ls.textContent = liked ? '已赞' : '赞';
+      }
+      toast(liked ? '已点赞，你的反馈将计入口碑层参考' : '已取消点赞');
+      return;
+    }
+    var save = e.target.closest('[data-fm-save]');
+    if(save){
+      var saved = save.classList.toggle('is-saved');
+      save.setAttribute('aria-pressed', saved ? 'true' : 'false');
+      var ss = countText(save);
+      if(ss){
+        ss.textContent = saved ? '已收藏' : '收藏';
+      }
+      toast(saved ? '已收藏该内容，可在个人收藏夹查看' : '已取消收藏');
+      return;
+    }
+  });
+
+  /* ---- 作者档案弹窗 ---- */
+  var modal = document.getElementById('fmModal');
+  var modalTitle = document.getElementById('fmModalTitle');
+  var modalBody = document.getElementById('fmModalBody');
+  var modalList = document.getElementById('fmModalList');
+  var submitHTML = modalList ? modalList.innerHTML : '';
+
+  var authorData = {
+    '云墟': ['云墟 · 签约创作者','建筑学出身，擅长先画地图再写人物。《山海折枝录》连续三周登顶热度榜，其世界构建方法在官方专栏连载 24 篇笔记。',['擅长领域：世界构建 / 群像叙事','已发表作品：6 部','站内粉丝：48.2 万','参与榜单口碑层评审工作']],
+    '沈砚白': ['沈砚白 · 签约创作者','前旧书店店员，现全职写作，坚持手写初稿。《九霄灯书人》连载六年，以缓慢温热的笔调写市井仙侠。',['擅长领域：市井仙侠 / 情绪铺陈','已发表作品：4 部','站内粉丝：33.7 万','担任口碑层评审，以严苛著称']],
+    '鹤川': ['鹤川 · 签约创作者','数学竞赛背景，擅长用图论方式设计人物关系，战斗调度在同类作品中辨识度极高。',['擅长领域：硬设定 / 战斗调度','已发表作品：8 部','站内粉丝：41.5 万','年度提名作品《焚星渡》作者']],
+    '阿棠': ['阿棠 · 新人创作者','白天在博物馆做讲解员，晚上写作。首作开篇曾被退稿十七次，改稿四个月后登上新人榜第一。',['擅长领域：东方奇幻 / 短篇抒情','已发表作品：2 部','站内粉丝：12.6 万','第 47 期新人榜第一名']],
+    '半盏灯': ['半盏灯 · 书评人 / 创作者','书评人出身，主张评价要给出可验证的依据，常为官方视频栏目供稿。',['擅长领域：文本细读 / 结构分析','已发表作品：3 部','站内粉丝：27.9 万','《青玉案·长夜》作者']],
+    '白露未晞': ['白露未晞 · 新人创作者','把武侠写成慢生活的实验者，作品每章结尾附一句手写“今日天气”，成为读者期待的彩蛋。',['擅长领域：武侠 / 生活质感','已发表作品：3 部','站内粉丝：9.8 万','第 47 期新人榜第二名']]
+  };
+
+  function openModal(title, body, listItems){
+    if(!modal) return;
+    modalTitle.textContent = title;
+    modalBody.textContent = body;
+    if(modalList){
+      if(listItems && listItems.length){
+        modalList.innerHTML = listItems.map(function(t){ return '<li>' + t + '</li>'; }).join('');
+      }else{
+        modalList.innerHTML = submitHTML;
+      }
+    }
+    modal.classList.add('is-on');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    if(!modal) return;
+    modal.classList.remove('is-on');
+    document.body.style.overflow = '';
+  }
+  if(modal){
+    modal.addEventListener('click', function(e){
+      if(e.target === modal || e.target.closest('[data-fm-close]')){
+        closeModal();
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && modal.classList.contains('is-on')) closeModal();
+    });
+  }
+
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('[data-fm-author]');
+    if(a){
+      e.preventDefault();
+      var name = a.getAttribute('data-fm-author');
+      var d = authorData[name];
+      if(d){
+        openModal(d[0], d[1], d[2]);
+      }
+      return;
+    }
+    var sub = e.target.closest('[data-fm-submit]');
+    if(sub){
+      openModal('投稿与报名', '官方投稿通道长期开放，年度创作者大赛与新人通道同步接受报名。请在材料中注明参与的组别。', null);
+      return;
+    }
+    var share = e.target.closest('[data-fm-share]');
+    if(share){
+      var text = '飞魔幻小说排行榜 · 第 47 期榜单与视频解读';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text + ' ' + '(官方页面链接已复制)').then(function(){
+          toast('分享文案已复制，可粘贴到微信 / 微博 / QQ');
+        }).catch(function(){
+          toast('可长按地址栏复制页面链接分享给好友');
+        });
+      }else{
+        toast('可长按地址栏复制页面链接分享给好友');
+      }
+      return;
+    }
+  });
+
+  /* ---- 回到顶部 ---- */
+  var backTop = document.getElementById('fmBackTop');
+  window.addEventListener('scroll', function(){
+    if(!backTop) return;
+    backTop.classList.toggle('is-on', window.scrollY > 520);
+  }, {passive:true});
+  if(backTop){
+    backTop.addEventListener('click', function(){
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  }
+})();
+</script>
+</body>
+  </html>
